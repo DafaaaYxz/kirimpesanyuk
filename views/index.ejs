@@ -1,19 +1,21 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>NGL Modern</title>
+    <title>NGL Clone</title>
 </head>
-<body class="bg-black text-white flex items-center justify-center min-h-screen font-sans">
-    <div class="w-full max-w-sm p-10 bg-[#0A0A0A] border border-[#1A1A1A] rounded-[2.5rem]">
-        <h1 class="text-5xl font-black text-center mb-2 tracking-tighter">NGL<span class="text-blue-500">.</span></h1>
-        <p class="text-gray-500 text-center text-xs font-bold tracking-[0.2em] mb-10 uppercase">Private Messaging</p>
-        <form action="/auth" method="POST" class="space-y-4">
-            <input type="text" name="username" placeholder="Username" class="w-full p-4 bg-[#111111] border border-[#222222] rounded-2xl focus:outline-none focus:border-blue-500" required>
-            <input type="password" name="password" placeholder="Password" class="w-full p-4 bg-[#111111] border border-[#222222] rounded-2xl focus:outline-none focus:border-blue-500" required>
-            <div class="grid grid-cols-2 gap-3 pt-4">
-                <button name="action" value="login" class="bg-white text-black font-bold py-4 rounded-2xl hover:bg-gray-200">MASUK</button>
-                <button name="action" value="register" class="bg-[#1A1A1A] border border-[#333333] font-bold py-4 rounded-2xl">DAFTAR</button>
+<body class="bg-black text-white flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-sm bg-[#0a0a0a] border border-[#1a1a1a] p-8 rounded-[2rem]">
+        <h1 class="text-4xl font-black text-center mb-1 tracking-tighter italic">NGL<span class="text-red-600">.</span></h1>
+        <p class="text-gray-500 text-[10px] text-center font-bold tracking-[3px] uppercase mb-8">Modern Anonymous</p>
+        <form action="/auth" method="POST" class="space-y-3">
+            <input type="text" name="username" placeholder="Username" class="w-full p-4 bg-[#111] border border-[#222] rounded-xl focus:outline-none focus:border-red-600 text-sm">
+            <input type="password" name="password" placeholder="Password" class="w-full p-4 bg-[#111] border border-[#222] rounded-xl focus:outline-none focus:border-red-600 text-sm">
+            <div class="grid grid-cols-2 gap-2 pt-2">
+                <button name="action" value="login" class="bg-white text-black font-bold py-3 rounded-xl text-sm">LOGIN</button>
+                <button name="action" value="register" class="bg-[#222] text-white font-bold py-3 rounded-xl text-sm border border-[#333]">DAFTAR</button>
             </div>
         </form>
     </div>
