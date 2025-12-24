@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Inbox</title>
+</head>
+<body class="bg-black text-white min-h-screen p-6">
+    <div class="max-w-md mx-auto">
+        <div class="flex justify-between items-end mb-10">
+            <h1 class="text-3xl font-black italic">INBOX</h1>
+            <a href="/logout" class="text-xs font-bold text-gray-500 border-b border-gray-500 pb-1">LOGOUT</a>
+        </div>
+        
+        <div class="bg-blue-600 p-4 rounded-2xl mb-8">
+            <p class="text-[10px] font-bold uppercase opacity-80 mb-1">Link Kamu:</p>
+            <p class="text-sm font-mono truncate">https://<%= host %>/u/<%= username %></p>
+        </div>
+
+        <div class="space-y-4">
+            <% if (messages.length === 0) { %>
+                <p class="text-center text-gray-600 py-20">Belum ada pesan masuk...</p>
+            <% } %>
+            <% messages.forEach(msgStr => { 
+                const msg = JSON.parse(msgStr); %>
+                <div class="bg-[#0A0A0A] border border-[#1A1A1A] p-6 rounded-[2rem]">
+                    <p class="text-blue-500 text-[10px] font-black uppercase mb-3">Anonim • <%= msg.time %></p>
+                    <p class="text-lg leading-relaxed"><%= msg.content %></p>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>
