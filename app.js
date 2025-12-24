@@ -1,3 +1,4 @@
+
 const express = require('express');
 const { Redis } = require('@upstash/redis');
 const cookieParser = require('cookie-parser');
@@ -7,8 +8,8 @@ const app = express();
 
 // --- KONFIGURASI UPSTASH ---
 const redis = new Redis({
-  url: 'REPLACE_WITH_URL',
-  token: 'REPLACE_WITH_TOKEN',
+  url: 'https://growing-firefly-50232.upstash.io',
+  token: 'AcQ4AAIncDFlYjI2ZWM2ODhmOGQ0N2YwOTI1Njg5ZDA3ZjRjMDdhMHAxNTAyMzI',
 });
 
 app.set('view engine', 'ejs');
