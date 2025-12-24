@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>NGL Modern</title>
+</head>
+<body class="bg-black text-white flex items-center justify-center min-h-screen font-sans">
+    <div class="w-full max-w-sm p-10 bg-[#0A0A0A] border border-[#1A1A1A] rounded-[2.5rem]">
+        <h1 class="text-5xl font-black text-center mb-2 tracking-tighter">NGL<span class="text-blue-500">.</span></h1>
+        <p class="text-gray-500 text-center text-xs font-bold tracking-[0.2em] mb-10 uppercase">Private Messaging</p>
+        <form action="/auth" method="POST" class="space-y-4">
+            <input type="text" name="username" placeholder="Username" class="w-full p-4 bg-[#111111] border border-[#222222] rounded-2xl focus:outline-none focus:border-blue-500" required>
+            <input type="password" name="password" placeholder="Password" class="w-full p-4 bg-[#111111] border border-[#222222] rounded-2xl focus:outline-none focus:border-blue-500" required>
+            <div class="grid grid-cols-2 gap-3 pt-4">
+                <button name="action" value="login" class="bg-white text-black font-bold py-4 rounded-2xl hover:bg-gray-200">MASUK</button>
+                <button name="action" value="register" class="bg-[#1A1A1A] border border-[#333333] font-bold py-4 rounded-2xl">DAFTAR</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
